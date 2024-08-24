@@ -1,0 +1,24 @@
+{
+    "name": "@classrom/frontend",
+    "version": "0.1.0",
+    "scripts": {
+        "build:dev": "webpack --env mode=development",
+        "build:prod": "webpack --env mode=production",
+        "start": "webpack serve --env mode=development",
+        "lint": "eslint"
+    },
+    "workspaces": [
+        "packages/*"
+    ],
+    "dependencies": {
+        "classnames": "^2.5.1",
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1"
+    },
+    "author": "@zoDler",
+    "devDependencies": {
+        "@types/react": "^18.3.3",
+        "@types/react-dom": "^18.3.0",
+        "typescript-plugin-css-modules": "^5.1.0"
+    }
+}

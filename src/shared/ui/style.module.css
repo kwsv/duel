@@ -1,0 +1,26 @@
+.block{
+    margin: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgb(192, 192, 192);
+    width: 150px;
+    border-radius: 30px;
+    align-items: center;
+    height: 7px;
+}
+.item {
+    /* height: 6px;
+    width: 6px;
+    box-sizing: content-box;
+    border-radius: 50%;
+    border: 3px solid rgb(192, 192, 192);
+    background-color: rgb(240, 240, 240); */
+}
+.selected {
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    box-sizing: content-box;
+    background-color: rgb(77, 143, 243);
+    border: 3px solid rgb(77, 143, 243);
+}
