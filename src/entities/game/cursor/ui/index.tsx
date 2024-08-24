@@ -7,6 +7,10 @@ export const GameCursor: FC = () => {
             position.current.x = event.offsetX;
             position.current.y = event.offsetY;
         };
+        gameField.current.onmouseleave = () => {
+            position.current.x = 0;
+            position.current.y = 0;
+        };
     };
 
     useGameObejct({

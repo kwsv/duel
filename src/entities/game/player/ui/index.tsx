@@ -73,7 +73,7 @@ export const GamePlayer: FC<IGamePlayerProps> = ({ radius, initialDirection, bul
     function click(_: IGameObject, position: Vector2D) {
         openMenu(position);
     }
-    const { hidden, coords, color, setColor, openMenu } = useColorMenu('#ff0000', isStoped);
+    const { hidden, coords, color, setColor, openMenu, closeMenu } = useColorMenu('#ff0000', isStoped);
 
     return (
         <div className={css.block}>
@@ -116,7 +116,7 @@ export const GamePlayer: FC<IGamePlayerProps> = ({ radius, initialDirection, bul
                 />
             </h4>
 
-            {!hidden && <ColorPicker color={color} setColor={setColor} coords={coords} />}
+            {!hidden && <ColorPicker color={color} setColor={setColor} onBlur={() => closeMenu()} coords={coords} />}
         </div>
     );
 };

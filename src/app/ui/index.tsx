@@ -32,12 +32,6 @@ export const App: FC = () => {
 
                 </div>
 
-                <span className={css.info}>
-                    Для остановки / возобновления игры нажмите SPACE
-                    <br />
-                    Смена цвета: пкм при остановленной игре
-                </span>
-
                 <GameCursor />
             </div>
 

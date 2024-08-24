@@ -87,17 +87,15 @@ export const useGameApi = (): IGame => {
 
     // click handling
     function click(position: Vector2D, pagePosition: Vector2D): void {
-        if (isStoped) {
-            for (const obj of objects.current) {
-                const pos: Vector2D = { x: position.x, y: obj.position.current.y };
+        for (const obj of objects.current) {
+            const pos: Vector2D = { x: position.x, y: obj.position.current.y };
 
-                const firstDistance = Math.abs(pos.y - position.y) + Math.abs(pos.x - position.x);
-                const secondDistance = Math.abs(pos.y - obj.position.current.y) + Math.abs(pos.x - obj.position.current.x);
-                const distance = Math.sqrt(firstDistance ** 2 + secondDistance ** 2);
+            const firstDistance = Math.abs(pos.y - position.y) + Math.abs(pos.x - position.x);
+            const secondDistance = Math.abs(pos.y - obj.position.current.y) + Math.abs(pos.x - obj.position.current.x);
+            const distance = Math.sqrt(firstDistance ** 2 + secondDistance ** 2);
 
-                if (distance <= obj.volume.current) {
-                    obj.click?.(obj, pagePosition);
-                }
+            if (distance <= obj.volume.current) {
+                obj.click?.(obj, pagePosition);
             }
         }
     }
