@@ -31,7 +31,7 @@ export const GameField: FC<IGameFieldProps> = ({ width, height }) => {
                 </p>
             </canvas>
 
-            <Button onClick={() => setStop((prev) => !prev)}>
+            <Button style={{ margin: 20 }} onClick={() => setStop((prev) => !prev)}>
                 {isStoped ? 'Возобновить' : 'Пауза'}
             </Button>
         </>
